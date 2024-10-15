@@ -255,12 +255,13 @@ footer {
 .contact-intro {
     display: none;
 }
-
-.my-works{
-    display: none;
-}
+@media (max-width:599px){
+.my-works {
+display: none;
+}}
 
 @media (min-width: 600px) and (max-width: 1024px) {
+
     .hamburger {
         display: none;
     }
@@ -338,10 +339,9 @@ footer {
         border-radius: 10px;
     }
 
-@media (min-width: 600px) and (max-width: 1024px){
-        .my-works-mobile {
-            display: none;
-        }}
+    .my-works-mobile {
+    display: none;
+    }
 
     hr {
         margin-left: 32px;
@@ -420,8 +420,8 @@ footer {
 
     input, textarea {
         width: 100%;
-        background-color: var(--primary-color-buttons);
-
+        background-color: #77777749;
+        border: none;
     }
 
     input {
@@ -459,6 +459,7 @@ footer {
 }
 
 @media (min-width: 1025px) {
+    
     .hamburger {
         display: none;
     }
@@ -590,6 +591,7 @@ footer {
     }  
 
     .my-works-intro p {
+        display: block;
         width: 923px;
         margin-left: 32px;
     }
@@ -688,14 +690,22 @@ footer {
 
     input, textarea {
         width: 100%;
-        background-color: var(--primary-color-buttons);
-
+        background-color: #77777749;
+        border: none;
     }
 
     input {
         height: 34px;
         margin-bottom: 24px;
     }
+
+    @media (min-width: 1025px){
+    .input:focus, textarea:focus{
+        outline: none;
+        box-sizing: border-box;
+        border-top: 2px solid var(--primary-color-text-dark);
+        border-left: 2px solid var(--primary-color-text-dark);
+    }}
 
     .contact-form button {
         background-color: var(--primary-color-headlines);
@@ -747,9 +757,8 @@ footer {
         display: inline-block;
         margin: 0;
     }
-}
 
-    @media (min-width: 1024px) {
-        .my-works-mobile {
-            display: none;
-        }}
+    .my-works-mobile {
+        display: none;
+    }
+}
